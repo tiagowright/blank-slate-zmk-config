@@ -43,6 +43,10 @@ COMBO(25 26, undo, &kp LG(Z))
 COMBO(26 27, copy, &kp LG(C))
 COMBO(27 28, cut, &kp LG(X))
 COMBO(26 28, paste, &kp LG(V))
+COMBO(37 38, undo2, &kp LG(Z))
+COMBO(38 39, copy2, &kp LG(C))
+COMBO(39 40, cut2, &kp LG(X))
+COMBO(38 40, paste2, &kp LG(V))
 COMBO(16 19, caps_word, &caps_word)
 
 /* Brackets */
@@ -58,25 +62,23 @@ L_COMBO(14 15 16, ltgt,              &macro_ltgt)
 
 /* Navigation */
   COMBO(26 27 28, cmdtab,      &kp LG(TAB))
+  COMBO(38 39 40, cmdtab2,     &kp LG(TAB))
   COMBO(    2  3, esc,         &kp ESC)
   COMBO(    7  8, enter,       &kp RET)
   COMBO(   20  7, cmdenter,    &kp LG(RET))
   COMBO(   33 34, commentline, &kp LG(SLASH))
   COMBO(   15  2, cmd1,        &kp LG(N1))
   COMBO(   15  4, cmd2,        &kp LG(N2))
-  COMBO(   15 38, cmdT,        &kp LG(T))
+  COMBO(   15 28, cmdT,        &kp LG(T))
   COMBO(   15 26, cmdD,        &kp LG(D))
   COMBO(   20 33, cmdL,        &kp LG(L))
   COMBO(   20 31, minus,       &kp MINUS)
 B_COMBO( 2  3  4, cmdW,        &kp LG(W))
 L_COMBO( 2  3  4, cmdQ,        &kp LG(Q))
 
-
 // SFB combos
 B_COMBO(27 31, combo_qu, &macro_qu)
 B_COMBO(27 19, combo_que, &macro_que)
 B_COMBO(25 22, combo_fa, &macro_fa)
 B_COMBO(13 34, combo_af, &macro_af)
-
-
 

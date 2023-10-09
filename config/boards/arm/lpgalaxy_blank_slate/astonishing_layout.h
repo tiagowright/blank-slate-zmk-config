@@ -36,25 +36,25 @@
 #define BTN(N) &bt BT_SEL N
 
 #define BASELAYER \
-    XXX  XXX         &kp C   &kp D      &kp V       XXX  XXX     MIC(CMMA)   CAM(H)      &kp W       XXX    XXX  \
-    XXX  HL(A,       S,      T,         O)          XXX  XXX     HR(E,       R,          N,          I)     XXX  \
-    XXX  &kp F       &kp G   &kp M      &kp BSPC    XXX  XXX     &kp U       &kp L       &kp P       &kp Y  XXX         
+    &kp ESC  XXX         &kp C   &kp D      &kp V       XXX  XXX     MIC(CMMA)   CAM(H)      &kp W       XXX    &kp BSPC  \
+    XXX      HL(A,       S,      T,         O)          XXX  XXX     HR(E,       R,          N,          I)     XXX  \
+    XXX      &kp F       &kp G   &kp M      &kp BSPC    XXX  XXX     &kp U       &kp L       &kp P       &kp Y  XXX         
 
 #define THUMBAR(LIN, LOUT, ROUT, RIN) \
-    XXX  XXX         XXX     XXX        LIN         LOUT ROUT    RIN         XXX         XXX         XXX    XXX
+    XXX      XXX         XXX     XXX        LIN         LOUT ROUT    RIN         XXX         XXX         XXX    XXX
 
 #define NAVSLAYER \
-    XXX  XXX         XXX     &kp EXCL   &kp QMARK   XXX  XXX     &kp DOT     &kp UP      &kp COLON   XXX    XXX  \
-    XXX  HL(BSLH,    Z,      X,         TAB)        XXX  XXX     HR(LEFT,    DOWN,       RIGHT,      J)     XXX  \
-    XXX  XXX         &kp AT  &kp Q      &kp BSPC    XXX  XXX     &kp QUOT    &kp K       &kp B       XXX    XXX
+    ___      XXX         XXX     &kp EXCL   &kp QMARK   XXX  XXX     &kp DOT     &kp UP      &kp COLON   XXX    ___  \
+    XXX      HL(BSLH,    Z,      X,         TAB)        XXX  XXX     HR(LEFT,    DOWN,       RIGHT,      J)     XXX  \
+    XXX      XXX         &kp AT  &kp Q      &kp BSPC    XXX  XXX     &kp QUOT    &kp K       &kp B       XXX    XXX
 
 #define NUMSLAYER \
-    XXX  XXX         XXX     &kp N9     XXX         XXX  XXX     &kp DOT     &kp N8      &kp SLASH   XXX    XXX  \
-    XXX  HL(N7,      N5,     N3,        N1)         XXX  XXX     HR(N0,      N2,         N4,         N6)    XXX  \
-    XXX  XXX         XXX     &kp Q      &kp BSPC    XXX  XXX     &kp PLUS    &kp MINUS   &kp EQUAL   XXX    XXX      
+    ___      XXX         XXX     &kp N9     XXX         XXX  XXX     &kp DOT     &kp N8      &kp SLASH   XXX    ___  \
+    XXX      HL(N7,      N5,     N3,        N1)         XXX  XXX     HR(N0,      N2,         N4,         N6)    XXX  \
+    XXX      XXX         XXX     &kp Q      &kp BSPC    XXX  XXX     &kp PLUS    &kp MINUS   &kp EQUAL   XXX    XXX      
 
 #define APPLAYER \
-    XXX  XXX         OPT(W)  OPT(E)     OPT(T)      XXX  XXX    BTN(1)       BTN(2)      BTN(3)      XXX            XXX \
-    XXX  OPT(A)      OPT(S)  OPT(N2)    OPT(N1)     XXX  XXX    &out OUT_BLE XXX         XXX         &out OUT_USB   XXX \
-    XXX  XXX         XXX     OPT(C)     &kp LG(TAB) XXX  XXX    XXX          XXX         XXX         &bt BT_CLR     XXX 
+    XXX      XXX         OPT(W)  OPT(E)     OPT(T)      XXX  XXX    BTN(1)       BTN(2)      BTN(3)      XXX            XXX \
+    XXX      OPT(A)      OPT(S)  OPT(N2)    OPT(N1)     XXX  XXX    &out OUT_BLE XXX         XXX         &out OUT_USB   XXX \
+    XXX      XXX         XXX     OPT(C)     &kp LG(TAB) XXX  XXX    XXX          XXX         XXX         &bt BT_CLR     XXX 
 
