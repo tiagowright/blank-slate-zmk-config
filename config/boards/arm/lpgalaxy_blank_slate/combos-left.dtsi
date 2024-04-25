@@ -1,0 +1,84 @@
+/*                  KEY POSITIONS
+
+  ╭────────────────────────────────────────────────╮
+  │  0   1   2   3   4   5   6   7   8   9  10  11 │
+  │ 12  13  14  15  16* 17  18 *19  20  21  22  23 │
+  │ 24  25  26  27  28  29  30  31  32  33  34  35 │
+  │ 36  37  38  39  40  41  42  43  44  45  46  47 │
+  ╰────────────────────────────────────────────────╯
+
+  ╭────────────────────────────────────────────────╮
+  │  .   1   2   3   .   5   6   7   .   .   .   . │
+  │ 12  13  14  15*  . *17  18  19  20   .   .   . │
+  │ 24  25  26  27   .  29  30  31  32   .   .   . │
+  │ .   .   38  39  40  41  42  .   .    .   .   . │
+  ╰────────────────────────────────────────────────╯
+
+*/
+
+compatible = "zmk,combos";
+
+#define COMBO(KEYPOS, NAME, BINDINGS) \
+  combo_##NAME { \
+    timeout-ms = <50>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+  };
+
+#define LAYERCOMBO(KEYPOS, NAME, BINDINGS, LAYERS) \
+  combo_##NAME { \
+    timeout-ms = <50>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <LAYERS>; \
+  };
+
+
+#define L_COMBO(KEYPOS, NAME, BINDINGS) LAYERCOMBO(KEYPOS, NAME, BINDINGS, LNUM LNUM2 LNAV)
+#define B_COMBO(KEYPOS, NAME, BINDINGS) LAYERCOMBO(KEYPOS, NAME, BINDINGS, LBASE)
+
+
+/* Text processing */
+COMBO(24 25, undo, &kp LG(Z))
+COMBO(26 25, copy, &kp LG(C))
+COMBO(27 26, cut, &kp LG(X))
+COMBO(24 26, paste, &kp LG(V))
+COMBO(37 36, undo2, &kp LG(Z))
+COMBO(38 37, copy2, &kp LG(C))y
+COMBO(39 38, cut2, &kp LG(X))
+COMBO(37 39, paste2, &kp LG(V))
+COMBO(15 17, caps_word, &caps_word)
+
+/* Brackets */
+L_COMBO(   29 30, left_parenthesis,  &kp LEFT_PARENTHESIS)
+L_COMBO(   30 31, right_parenthesis, &kp RIGHT_PARENTHESIS)
+L_COMBO(29 30 31, parentheses,       &macro_parentheses)
+L_COMBO(     5 6, left_bracket,      &kp LEFT_BRACKET)
+L_COMBO(     6 7, right_bracket,     &kp RIGHT_BRACKET)
+L_COMBO(   5 6 7, brackets,          &macro_brackets)
+L_COMBO(   14 13, less_than,         &kp LESS_THAN)
+L_COMBO(   15 14, greater_than,      &kp GREATER_THAN)
+L_COMBO(14 15 13, ltgt,              &macro_ltgt)
+
+/* Navigation */
+  COMBO(   14 27, cmdTee,      &kp LG(T))
+  COMBO(   14 25, cmdD,        &kp LG(D))
+  COMBO(26 27 25, cmdtab,      &kp LG(TAB))
+  COMBO(38 39 37, cmdtab2,     &kp LG(TAB))
+  COMBO(    2  1, esc,         &kp ESC)
+  COMBO(    5  6, enter,       &kp RET)
+  COMBO(   18  5, cmdenter,    &kp LG(RET))
+  COMBO(   31 32, commentline, &kp LG(SLASH))
+  COMBO(   14  1, cmd1,        &kp LG(N1))
+  COMBO(   14  3, cmd2,        &kp LG(N2))
+  COMBO(   18 31, cmdL,        &kp LG(L))
+  COMBO(   18 29, minus,       &kp MINUS)
+B_COMBO( 2  3  1, cmdW,        &kp LG(W))
+L_COMBO( 2  3  1, cmdQ,        &kp LG(Q))
+
+// SFB combos
+B_COMBO(26 29, combo_qu, &macro_qu)
+B_COMBO(26 17, combo_que, &macro_que)
+B_COMBO(24 20, combo_fa, &macro_fa)
+B_COMBO(12 32, combo_af, &macro_af)
+

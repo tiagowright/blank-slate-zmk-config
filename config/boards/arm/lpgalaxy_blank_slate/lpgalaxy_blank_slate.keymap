@@ -1,10 +1,17 @@
+#define CENTERED
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#include "astonishing_layout.h"
+#ifdef CENTERED
+    #include "astonishing_layout.h"
+#else
+    #include "astonishing_left.h"
+#endif
+
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS BSPC AMPERSAND TILDE GRAVE APOSTROPHE CARET>;
@@ -44,7 +51,12 @@
     };
 
     combos {
-        #include "combos.dtsi"
+
+        #ifdef CENTERED
+            #include "combos.dtsi"
+        #else
+            #include "combos-left.dtsi"
+        #endif
     };
 
     macros {
