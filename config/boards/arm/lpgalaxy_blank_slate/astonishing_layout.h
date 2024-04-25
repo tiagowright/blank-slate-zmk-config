@@ -36,9 +36,9 @@
 #define BTN(N) &bt BT_SEL N
 
 #define BASELAYER \
-    &kp ESC  XXX         &kp C   &kp D      &kp V       XXX  XXX     MIC(CMMA)   CAM(H)      &kp W       XXX    &kp BSPC  \
-    XXX      HL(A,       S,      T,         O)          XXX  XXX     HR(E,       R,          N,          I)     XXX  \
-    XXX      &kp F       &kp G   &kp M      &kp BSPC    XXX  XXX     &kp U       &kp L       &kp P       &kp Y  &kp RET         
+    &kp ESC  XXX         &kp C   &kp D      &kp V       XXX         XXX          MIC(CMMA)   CAM(H)      &kp W       XXX    &kp BSPC  \
+    XXX      HL(A,       S,      T,         O)          &sk LSHIFT  &sk RSHIFT   HR(E,       R,          N,          I)     XXX  \
+    XXX      &kp F       &kp G   &kp M      &kp BSPC    XXX         XXX.         &kp U       &kp L       &kp P       &kp Y  &kp RET         
 
 #define THUMBAR(LIN, LOUT, ROUT, RIN) \
     XXX      XXX         XXX     LIN        LOUT        XXX  ROUT    RIN         XXX         XXX         XXX    XXX
